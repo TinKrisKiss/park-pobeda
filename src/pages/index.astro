@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="Главная">
+  <section style="text-align: center; padding: 2rem 0;">
+    <h1 style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem;">БРОНЬ БЕСЕДКИ ОНЛАЙН</h1>
+    <div class="card" style="max-width: 700px; margin: 0 auto; text-align: left;">
+      <p>Залог 3000₽ возвращается при сдаче. Въезд на машине — 500₽ (1 бесплатно). Перенос брони +20%.</p>
+      <a href="/services/" class="btn">Услуги парка</a>
+    </div>
+    <div class="grid">
+      <div class="card"><h3>Отмена</h3><p>Ознакомьтесь с условиями до подтверждения.</p></div>
+      <div class="card"><h3>Залог</h3><p>3000₽ наличными, возвращается при сдаче.</p></div>
+      <div class="card"><h3>Въезд</h3><p>500₽ за машину, 1 въезд бесплатно.</p></div>
+      <div class="card"><h3>Перенос</h3><p>Возможен с доплатой 20%.</p></div>
+    </div>
+  </section>
+</BaseLayout>

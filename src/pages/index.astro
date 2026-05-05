@@ -2,12 +2,12 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BookingWidget from '../components/BookingWidget.astro';
 import Accordion from '../components/Accordion.astro';
-import heroImg from '../assets/hero-bg.jpg';
 ---
 
 <BaseLayout title="Аренда беседки в лесопарке">
   <div class="hero-wrapper">
-    <img src={heroImg} alt="Парк Победы" class="hero-image">
+    <!-- Явный путь с префиксом репозитория -->
+    <img src="/park-pobeda/hero-bg.jpg" alt="Парк Победы" class="hero-image">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1 class="hero-title">Аренда беседки в лесопарке</h1>

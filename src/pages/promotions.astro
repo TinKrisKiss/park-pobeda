@@ -1,15 +1,33 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BookingWidget from '../components/BookingWidget.astro';
 ---
+
 <BaseLayout title="Акции">
-  <section style="text-align: center; padding: 2rem 0;">
-    <h1 style="color: var(--primary); margin-bottom: 1.5rem;">Наши акции</h1>
-    <div class="card" style="max-width: 700px; margin: 0 auto; text-align: left;">
-      <h2 style="color: var(--primary); margin-bottom: 1rem;">АРЕНДА БЕСЕДОК</h2>
-      <p><strong style="background: var(--accent); color: #fff; padding: 0.2rem 0.5rem; border-radius: 4px;">20%</strong> в пятницу и воскресенье на День Рождения!</p>
-      <p style="margin: 0.5rem 0;"><strong style="background: var(--accent); color: #fff; padding: 0.2rem 0.5rem; border-radius: 4px;">30%</strong> майская акция на VIP-беседки и шале (пн-чт)</p>
-      <p>Скидка действует за 3 дня до и после Дня Рождения. Не действует в субботу и праздники.</p>
-      <p style="margin-top: 1rem;"><strong>Подробности:</strong> <a href="tel:+79025018056" style="color: var(--accent); font-weight: 600;">+7 (902) 501-80-56</a></p>
+  <div class="container" style="padding-top: 2rem;">
+    <h1 style="text-align: center; margin-bottom: 2rem;">Наши акции</h1>
+    
+    <BookingWidget />
+
+    <div class="card" style="margin-bottom: 2rem; border: 2px solid var(--accent);">
+      <h2 style="color: var(--accent); text-align: center;">🎉 День Рождения</h2>
+      <p style="text-align: center; font-size: 1.2rem; font-weight: bold;">Скидка 20% в пятницу и воскресенье!</p>
+      <p style="text-align: center; margin-top: 1rem;">Действует за 3 дня до и 3 дня после даты рождения.</p>
     </div>
-  </section>
+
+    <div class="card" style="margin-bottom: 2rem;">
+      <h2 style="color: var(--primary);">🌿 Майская акция</h2>
+      <p><strong>Скидка 30%</strong> на VIP-беседки, шале и большие беседки.</p>
+      <p style="margin-top: 0.5rem;">📅 Действует: Понедельник – Четверг.</p>
+      <p style="color: red; font-size: 0.9rem;">❌ Не действует в праздничные дни и субботу.</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+        Предоставляется при очном бронировании или оплате 30% на сайте. Остаток оплачивается при заселении.
+      </p>
+    </div>
+
+    <div class="card" style="background: #ffebee; color: #c62828;">
+      <h3>⛔ Внимание!</h3>
+      <p>Акции <strong>не распространяются</strong> на формат "Беседка маленькая и мостики".</p>
+    </div>
+  </div>
 </BaseLayout>

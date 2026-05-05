@@ -1,16 +1,14 @@
 <header>
   <div class="container header-top">
     <a href="/park-pobeda/" class="logo">Парк Победы</a>
-    
-    <!-- Кнопка меню для мобильных -->
-    <button class="menu-toggle" id="menu-btn" aria-label="Открыть меню">☰</button>
-    
+    <button class="menu-toggle" id="menu-btn" aria-label="Меню">☰</button>
     <nav id="main-nav">
       <ul>
         <li><a href="/park-pobeda/">Главная</a></li>
         <li><a href="/park-pobeda/promotions/">Акции</a></li>
         <li><a href="/park-pobeda/services/">Услуги</a></li>
         <li><a href="/park-pobeda/menu/">Меню</a></li>
+        <li><a href="/park-pobeda/gallery/">Галерея</a></li>
         <li><a href="/park-pobeda/contacts/">Контакты</a></li>
       </ul>
     </nav>
@@ -18,10 +16,8 @@
 </header>
 
 <script>
-  // Простой скрипт для открытия/закрытия меню на телефоне
   const btn = document.getElementById('menu-btn');
   const nav = document.getElementById('main-nav');
-  
   if (btn && nav) {
     btn.addEventListener('click', () => {
       nav.classList.toggle('active');

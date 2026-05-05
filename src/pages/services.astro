@@ -1,19 +1,51 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BookingWidget from '../components/BookingWidget.astro';
 ---
+
 <BaseLayout title="Услуги">
-  <section style="text-align: center; padding: 2rem 0;">
-    <h1 style="color: var(--primary); margin-bottom: 1.5rem;">Услуги</h1>
-    <div class="card" style="max-width: 800px; margin: 0 auto; text-align: left;">
-      <ul style="list-style: none; display: grid; gap: 0.75rem;">
-        <li>✓ Аренда беседок (мангал, туалет, протопка зимой)</li>
-        <li>✓ Детский пляж + бассейн</li>
-        <li>✓ Верёвочный парк и аттракционы</li>
-        <li>✓ Кафе «Шале» и банкетный зал</li>
-        <li>✓ Кейтеринг и доставка блюд</li>
-        <li>✓ Велопрокат, парковка, зимняя горка</li>
+  <div class="container" style="padding-top: 2rem;">
+    <h1 style="text-align: center;">Услуги парка</h1>
+    
+    <BookingWidget />
+
+    <p style="text-align: center; font-style: italic; opacity: 0.7; margin-bottom: 2rem;">
+      *Информация о составе оказываемых услуг не является офертой и подлежит уточнению при заказе*
+    </p>
+
+    <div class="card" style="max-width: 800px; margin: 0 auto;">
+      <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
+        Парк Победы приглашает провести свои выходные вместе с нами! <br>
+        <strong>Забронировать беседку:</strong> <a href="tel:+79025018056" style="color: var(--accent);">+7 (902) 501-80-56</a>
+      </p>
+
+      <h3>Основные услуги:</h3>
+      <ul style="list-style: none; display: grid; gap: 0.8rem;">
+        <li>✅ Аренда уютных беседок (мангал, туалет, протопка зимой включены)</li>
+        <li>✅ Детский пляж + бассейн</li>
+        <li>✅ Бассейн с подогревом (Royal Beach)</li>
+        <li>✅ Веревочный парк и детские аттракционы</li>
+        <li>✅ Кафе «Шале» и банкетный зал</li>
+        <li>✅ Кейтеринг и доставка блюд для пикника</li>
+        <li>✅ Велопрокат и парковка</li>
+        <li>✅ Зимняя супер-горка и каток</li>
       </ul>
-      <p style="margin-top: 1.5rem; text-align: center;"><strong>Бронь:</strong> <a href="tel:+79025018056" style="color: var(--accent);">+7 (902) 501-80-56</a></p>
+
+      <hr style="margin: 2rem 0; border: 0; border-top: 1px solid #eee;">
+
+      <h3>Аренда инвентаря:</h3>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
+        <div>♟ Шахматы/Шашки/Нарды: <strong>300₽/ч</strong> (мин. 2ч)</div>
+        <div>🏓 Настольный теннис: <strong>500₽/ч</strong> (мин. 2ч)</div>
+        <div>🍲 Микроволновка/Чайник: <strong>500₽</strong> (залог 3000₽)</div>
+      </div>
+
+      <h3>Дополнительно:</h3>
+      <p>Шампуры (6 шт.) — 400₽ | Решетка — 650₽ | Розжиг — 150₽ | Уголь (3кг) — 400₽</p>
+      
+      <p style="margin-top: 2rem; text-align: center; font-weight: 500; color: var(--primary);">
+        Живописная природа делает отдых здесь фантастическим!
+      </p>
     </div>
-  </section>
+  </div>
 </BaseLayout>

@@ -1,36 +1,44 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BookingWidget from '../components/BookingWidget.astro';
 ---
 
-<BaseLayout title="Главная">
-  <!-- Герой-секция с фоном -->
+<BaseLayout title="Аренда беседки в лесопарке">
+  <!-- Герой-секция -->
   <section class="hero-section" style="background-image: url('/images/hero-bg.jpg');">
     <div class="hero-overlay"></div>
     <div class="hero-content container">
-      <h1 class="hero-title">Отдых в сердце города</h1>
+      <h1 class="hero-title">Аренда беседки в лесопарке</h1>
       <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">
-        Аренда беседок, кафе и развлечения для всей семьи в Парке Победы
+        Уютный отдых на природе в черте города
       </p>
-      <a href="/park-pobeda/services/" class="btn">Забронировать беседку</a>
     </div>
   </section>
 
   <div class="container">
+    <BookingWidget />
+
+    <!-- Условия бронирования -->
+    <section class="card" style="margin-bottom: 3rem; background: #FFF3E0; border-left: 5px solid var(--accent);">
+      <h3 style="color: var(--accent);">⚠️ Важная информация</h3>
+      <ul style="list-style: none; padding: 0; display: grid; gap: 0.5rem;">
+        <li>🔹 <strong>Залог:</strong> 3000₽ наличными (возвращается при сдаче беседки).</li>
+        <li>🔹 <strong>Въезд:</strong> 500₽ за машину (первый въезд бесплатно).</li>
+        <li>🔹 <strong>Отмена/Перенос:</strong> Возможен перенос брони с доплатой 20%.</li>
+        <li>🔹 <strong>Оплата:</strong> Принимаем карты и наличные.</li>
+      </ul>
+    </section>
+
     <section class="grid">
       <div class="card">
-        <h3>Акции</h3>
-        <p>Скидки именинникам и специальные предложения в будни.</p>
+        <h3>🔥 Акции</h3>
+        <p>Скидки именинникам и специальные предложения.</p>
         <a href="/park-pobeda/promotions/" style="color: var(--accent); font-weight: 600;">Подробнее →</a>
       </div>
       <div class="card">
-        <h3>Кафе Шале</h3>
-        <p>Шашлык на углях, пицца и прохладительные напитки.</p>
+        <h3>🍔 Кафе «Шале»</h3>
+        <p>Шашлык на углях и прохладительные напитки.</p>
         <a href="/park-pobeda/menu/" style="color: var(--accent); font-weight: 600;">Смотреть меню →</a>
-      </div>
-      <div class="card">
-        <h3>Контакты</h3>
-        <p>Мы всегда на связи. Звоните для бронирования.</p>
-        <a href="tel:+79025018056" style="color: var(--accent); font-weight: 600;">+7 (902) 501-80-56</a>
       </div>
     </section>
   </div>

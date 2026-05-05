@@ -1,14 +1,26 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import BookingWidget from '../components/BookingWidget.astro';
 ---
+
 <BaseLayout title="Контакты">
-  <section style="text-align: center; padding: 2rem 0;">
-    <h1 style="color: var(--primary); margin-bottom: 1.5rem;">Контакты</h1>
-    <div class="card" style="max-width: 600px; margin: 0 auto; text-align: left;">
-      <p><strong>ООО «Новая Волна»</strong></p>
-      <p>ИНН: 6686084228 | КПП: 668601001</p>
-      <p>Юр. адрес: 620143, г. Екатеринбург, ул. Калинина 59-459</p>
-      <p style="margin-top: 1rem;"><strong>Аренда беседок:</strong> <a href="tel:+79025018056" style="color: var(--accent); font-weight: 600;">+7 (902) 501-80-56</a></p>
+  <section class="hero-section" style="background-image: url('/images/contacts-bg.jpg'); padding: 4rem 1rem;">
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h1 class="hero-title" style="font-size: 2.5rem;">Контакты</h1>
     </div>
   </section>
+
+  <div class="container">
+    <BookingWidget />
+
+    <div class="card" style="max-width: 600px; margin: 2rem auto; text-align: left;">
+      <p><strong>ООО «Новая Волна»</strong></p>
+      <p>ИНН: 6686084228</p>
+      <p>Адрес: г. Екатеринбург, ул. Кировградская 101</p>
+      <p style="margin-top: 1rem;">
+        <strong>Телефон:</strong> <a href="tel:+79025018056" style="color: var(--accent); font-size: 1.2rem;">+7 (902) 501-80-56</a>
+      </p>
+    </div>
+  </div>
 </BaseLayout>

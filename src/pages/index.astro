@@ -2,17 +2,12 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BookingWidget from '../components/BookingWidget.astro';
 import Accordion from '../components/Accordion.astro';
+import heroImg from '../assets/hero-bg.jpg';
 ---
 
 <BaseLayout title="Аренда беседки в лесопарке">
-  <!-- Герой-секция с картинкой (не фон!) -->
   <div class="hero-wrapper">
-    <img 
-      src="/park-pobeda/images/hero-bg.jpg" 
-      alt="Парк Победы" 
-      class="hero-image"
-      onerror="this.style.display='none'; this.nextElementSibling?.style.setProperty('background', '#2B4C3A')"
-    >
+    <img src={heroImg} alt="Парк Победы" class="hero-image">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1 class="hero-title">Аренда беседки в лесопарке</h1>
@@ -23,7 +18,6 @@ import Accordion from '../components/Accordion.astro';
   <div class="container">
     <BookingWidget />
 
-    <!-- Аккордеон с условиями -->
     <Accordion title="⚠️ Внимание! Обязательно ознакомьтесь с условиями отмены бронирования">
       <p><strong>Что включено в стоимость аренды:</strong></p>
       <ul style="margin: 0.5rem 0 1rem 1.5rem;">
@@ -31,7 +25,6 @@ import Accordion from '../components/Accordion.astro';
         <li>Комфортный стационарный туалет в отдельном здании</li>
         <li>Протопка беседки в зимнее время к вашему заезду</li>
       </ul>
-      
       <p><strong>Важная информация:</strong></p>
       <ul style="margin: 0.5rem 0 1rem 1.5rem;">
         <li>Залог 3000₽ наличными (возвращается при сдаче беседки)</li>
@@ -39,16 +32,14 @@ import Accordion from '../components/Accordion.astro';
         <li>Перенос брони возможен с доплатой 20%</li>
         <li>Все консультации: <a href="tel:+79025018056" style="color: var(--accent);">+7 (902) 501-80-56</a></li>
       </ul>
-
       <details style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">
         <summary style="cursor: pointer; color: var(--accent);">Согласие на обработку персональных данных (152-ФЗ)</summary>
         <p style="margin-top: 0.5rem; line-height: 1.4;">
-          Настоящим Вы подтверждаете согласие на обработку ООО «Новая Волна» ваших персональных данных в целях исполнения заказов и договоров. Обработка осуществляется с гарантией конфиденциальности. Согласие действует бессрочно и может быть отозвано письменно по адресу: 620088, г. Екатеринбург, ул. Калинина 59-459.
+          Настоящим Вы подтверждаете согласие на обработку ООО «Новая Волна» ваших персональных данных...
         </p>
       </details>
     </Accordion>
 
-    <!-- Карточки услуг -->
     <section class="grid">
       <div class="card">
         <h3>🔥 Акции</h3>

@@ -1,17 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BookingWidget from '../components/BookingWidget.astro';
+import contactsImg from '../assets/contacts-bg.jpg';
 ---
 
 <BaseLayout title="Контакты">
-  <!-- Герой-секция с картинкой -->
   <div class="hero-wrapper">
-    <img 
-      src="/park-pobeda/images/contacts-bg.jpg" 
-      alt="Контакты парка" 
-      class="hero-image"
-      onerror="this.style.display='none'"
-    >
+    <img src={contactsImg} alt="Контакты" class="hero-image">
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <h1 class="hero-title">Контакты</h1>
@@ -21,16 +16,12 @@ import BookingWidget from '../components/BookingWidget.astro';
 
   <div class="container">
     <BookingWidget />
-
     <div class="card" style="max-width: 600px; margin: 2rem auto; text-align: left;">
       <p><strong>ООО «Новая Волна»</strong></p>
       <p>ИНН: 6686084228</p>
       <p>Адрес: г. Екатеринбург, ул. Кировградская 101</p>
       <p style="margin-top: 1rem;">
-        <strong>Телефон:</strong> 
-        <a href="tel:+79025018056" style="color: var(--accent); font-size: 1.2rem; font-weight: 600;">
-          +7 (902) 501-80-56
-        </a>
+        <strong>Телефон:</strong> <a href="tel:+79025018056" style="color: var(--accent); font-size: 1.2rem; font-weight: 600;">+7 (902) 501-80-56</a>
       </p>
     </div>
   </div>

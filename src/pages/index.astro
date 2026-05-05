@@ -1,11 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BookingWidget from '../components/BookingWidget.astro';
+import Accordion from '../components/Accordion.astro';
 ---
 
 <BaseLayout title="Аренда беседки в лесопарке">
-  <!-- Герой-секция -->
-  <section class="hero-section" style="background-image: url('/images/hero-bg.jpg');">
+  <!-- Герой-секция (исправленный путь к картинке) -->
+  <section class="hero-section" style="background-image: url('/park-pobeda/images/hero-bg.jpg');">
     <div class="hero-overlay"></div>
     <div class="hero-content container">
       <h1 class="hero-title">Аренда беседки в лесопарке</h1>
@@ -18,28 +19,34 @@ import BookingWidget from '../components/BookingWidget.astro';
   <div class="container">
     <BookingWidget />
 
-    <!-- Условия бронирования -->
-    <section class="card" style="margin-bottom: 3rem; background: #FFF3E0; border-left: 5px solid var(--accent);">
-      <h3 style="color: var(--accent);">⚠️ Важная информация</h3>
-      <ul style="list-style: none; padding: 0; display: grid; gap: 0.5rem;">
-        <li>🔹 <strong>Залог:</strong> 3000₽ наличными (возвращается при сдаче беседки).</li>
-        <li>🔹 <strong>Въезд:</strong> 500₽ за машину (первый въезд бесплатно).</li>
-        <li>🔹 <strong>Отмена/Перенос:</strong> Возможен перенос брони с доплатой 20%.</li>
-        <li>🔹 <strong>Оплата:</strong> Принимаем карты и наличные.</li>
+    <!-- Аккордеон с условиями -->
+    <Accordion title="⚠️ Внимание! Обязательно ознакомьтесь с условиями отмены бронирования">
+      <p><strong>Что включено в стоимость аренды:</strong></p>
+      <ul style="margin: 0.5rem 0 1rem 1.5rem;">
+        <li>Мангал и специально оборудованное место для жарки шашлыка</li>
+        <li>Комфортный стационарный туалет в отдельном здании</li>
+        <li>Протопка беседки в зимнее время к вашему заезду</li>
       </ul>
-    </section>
+      
+      <p><strong>Важная информация:</strong></p>
+      <ul style="margin: 0.5rem 0 1rem 1.5rem;">
+        <li>Залог 3000₽ наличными (возвращается при сдаче беседки)</li>
+        <li>Въезд на машине: 500₽ (1 въезд на беседку — бесплатно)</li>
+        <li>Перенос брони возможен с доплатой 20%</li>
+        <li>Все консультации: <a href="tel:+79025018056" style="color: var(--accent);">+7 (902) 501-80-56</a></li>
+      </ul>
 
+      <details style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.8;">
+        <summary style="cursor: pointer; color: var(--accent);">Согласие на обработку персональных данных (152-ФЗ)</summary>
+        <p style="margin-top: 0.5rem; line-height: 1.4;">
+          Настоящим Вы подтверждаете согласие на обработку ООО «Новая Волна» ваших персональных данных в целях исполнения заказов и договоров. Обработка осуществляется с гарантией конфиденциальности. Согласие действует бессрочно и может быть отозвано письменно по адресу: 620088, г. Екатеринбург, ул. Калинина 59-459.
+        </p>
+      </details>
+    </Accordion>
+
+    <!-- Остальной контент главной страницы -->
     <section class="grid">
-      <div class="card">
-        <h3>🔥 Акции</h3>
-        <p>Скидки именинникам и специальные предложения.</p>
-        <a href="/park-pobeda/promotions/" style="color: var(--accent); font-weight: 600;">Подробнее →</a>
-      </div>
-      <div class="card">
-        <h3>🍔 Кафе «Шале»</h3>
-        <p>Шашлык на углях и прохладительные напитки.</p>
-        <a href="/park-pobeda/menu/" style="color: var(--accent); font-weight: 600;">Смотреть меню →</a>
-      </div>
+      <!-- ... карточки ... -->
     </section>
   </div>
 </BaseLayout>

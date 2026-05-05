@@ -1,0 +1,28 @@
+---
+const { title, content } = Astro.props;
+---
+<div class="accordion" style="margin: 2rem 0;">
+  <button class="accordion-header" style="width: 100%; text-align: left; padding: 1rem; background: var(--primary); color: white; border: none; border-radius: 8px 8px 0 0; cursor: pointer; font-weight: 600; display: flex; justify-content: space-between; align-items: center;">
+    {title}
+    <span class="accordion-icon" style="transition: transform 0.2s;">▼</span>
+  </button>
+  <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: white; padding: 0 1rem; border-radius: 0 0 8px 8px;">
+    <div style="padding: 1rem 0; line-height: 1.6; font-size: 0.95rem;">
+      <slot />
+    </div>
+  </div>
+</div>
+
+<script>
+  const header = document.querySelector('.accordion-header');
+  const content = document.querySelector('.accordion-content');
+  const icon = document.querySelector('.accordion-icon');
+  
+  if (header && content) {
+    header.addEventListener('click', () => {
+      const isOpen = content.style.maxHeight;
+      content.style.maxHeight = isOpen ? '' : content.scrollHeight + 'px';
+      icon.style.transform = isOpen ? '' : 'rotate(180deg)';
+    });
+  }
+</script>

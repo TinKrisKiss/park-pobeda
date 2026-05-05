@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import BookingWidget from '../components/BookingWidget.astro';
+---
+
+<BaseLayout title="Кейтеринг">
+  <div class="container" style="padding-top: 2rem;">
+    <h1 style="text-align: center;">Кейтеринговое обслуживание</h1>
+    
+    <BookingWidget />
+
+    <!-- Меню-заглушка -->
+    <div style="text-align: center; margin: 2rem 0;">
+      <img src="https://placehold.co/800x400/2B4C3A/F5F4F1?text=Меню+полуфабрикатов" alt="Меню" style="max-width: 100%; border-radius: 8px;">
+    </div>
+
+    <section class="card" style="max-width: 700px; margin: 0 auto;">
+      <h2 style="color: var(--accent); text-align: center;">ПОЛУФАБРИКАТЫ</h2>
+      
+      <ul style="list-style: none; display: grid; gap: 1rem; margin: 1.5rem 0;">
+        <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed #ddd; padding-bottom: 0.5rem;">
+          <span>🍗 Куриное бедро маринованное для шашлыка (1 кг)</span>
+          <strong>1 750 ₽</strong>
+        </li>
+        <li style="font-size: 0.9rem; opacity: 0.8; padding-left: 1.5rem;">(пожарить +300 ₽)</li>
+        
+        <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed #ddd; padding-bottom: 0.5rem; padding-top: 0.5rem;">
+          <span>🥩 Свиная шея маринованная для шашлыка (1 кг)</span>
+          <strong>1 900 ₽</strong>
+        </li>
+        <li style="font-size: 0.9rem; opacity: 0.8; padding-left: 1.5rem;">(пожарить +300 ₽)</li>
+        
+        <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed #ddd; padding-bottom: 0.5rem; padding-top: 0.5rem;">
+          <span>🥗 Овощи маринованные для гриля (0,5 кг)</span>
+          <strong>830 ₽</strong>
+        </li>
+        <li style="font-size: 0.9rem; opacity: 0.8; padding-left: 1.5rem;">(перец, баклажаны, цукини, лук; пожарить +300 ₽)</li>
+        
+        <li style="display: flex; justify-content: space-between; border-bottom: 1px dashed #ddd; padding-bottom: 0.5rem; padding-top: 0.5rem;">
+          <span>🥣 Соус восточный (100 г)</span>
+          <strong>100 ₽</strong>
+        </li>
+      </ul>
+
+      <div style="background: #e8f5e9; padding: 1rem; border-radius: 8px; margin-top: 1.5rem; text-align: center;">
+        <p style="margin: 0; font-weight: 600; color: var(--primary);">✅ Качество продуктов гарантируем! И мы всегда рядом!</p>
+        <p style="margin: 0.5rem 0 0; font-size: 0.9rem;">
+          Возможен заказ плова и полуфабрикатов «день в день» (+20% к стоимости).<br>
+          Подробности у менеджера: <a href="tel:+73300788" style="color: var(--accent); font-weight: 600;">330-07-88</a>
+        </p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

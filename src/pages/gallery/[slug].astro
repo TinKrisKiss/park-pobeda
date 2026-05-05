@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const galleries = [
+    { params: { slug: 'royal-beach' }, props: { title: 'Royal Beach', photos: Array(30).fill('https://placehold.co/400x300/2B4C3A/F5F4F1?text=Фото') } },
+    { params: { slug: 'cafe-shale' }, props: { title: 'Кафе Шале', photos: Array(30).fill('https://placehold.co/400x300/2B4C3A/F5F4F1?text=Фото') } },
+    { params: { slug: 'banquet-hall' }, props: { title: 'Банкетный зал', photos: Array(30).fill('https://placehold.co/400x300/2B4C3A/F5F4F1?text=Фото') } },
+    { params: { slug: 'winter-park' }, props: { title: 'Зимняя горка и каток', photos: Array(30).fill('https://placehold.co/400x300/2B4C3A/F5F4F1?text=Фото') } },
+  ];
+  return galleries;
+}
+
+const { title, photos } = Astro.props;
+---
+
+<BaseLayout title={title}>
+  <div class="container" style="padding-top: 2rem;">
+    <a href="/park-pobeda/gallery/" style="display: inline-block; margin-bottom: 1rem; color: var(--accent);">← Назад к галерее</a>
+    <h1 style="margin-bottom: 2rem;">{title}</h1>
+    
+    <!-- Сетка 5x6 (30 фото) -->
+    <div class="grid" style="grid-template-columns: repeat(5, 1fr); gap: 0.5rem;">
+      {photos.map((src) => (
+        <img src={src} alt="" style="width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 4px; cursor: pointer;" onclick="this.requestFullscreen?.()">
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  @media (max-width: 900px) {
+    .grid { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>

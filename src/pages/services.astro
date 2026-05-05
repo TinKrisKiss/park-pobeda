@@ -5,46 +5,86 @@ import BookingWidget from '../components/BookingWidget.astro';
 
 <BaseLayout title="Услуги">
   <div class="container" style="padding-top: 2rem;">
-    <h1 style="text-align: center;">Услуги парка</h1>
+    <h1 style="text-align: center; margin-bottom: 1rem;">Услуги парка</h1>
     
+    <!-- Виджет бронирования -->
     <BookingWidget />
 
-    <p style="text-align: center; font-style: italic; opacity: 0.7; margin-bottom: 2rem;">
-      *Информация о составе оказываемых услуг не является офертой и подлежит уточнению при заказе*
+    <!-- Дисклеймер -->
+    <p style="text-align: center; font-style: italic; opacity: 0.7; margin: 1rem 0 2rem; font-size: 0.9rem;">
+      *Информация о составе оказываемых услуг не является офертой и подлежит уточнению при непосредственном заказе услуг*
     </p>
 
     <div class="card" style="max-width: 800px; margin: 0 auto;">
-      <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">
-        Парк Победы приглашает провести свои выходные вместе с нами! <br>
-        <strong>Забронировать беседку:</strong> <a href="tel:+79025018056" style="color: var(--accent);">+7 (902) 501-80-56</a>
+      <!-- Приветствие и телефон -->
+      <p style="font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6;">
+        Парк Победы приглашает провести свои выходные вместе с нами!<br>
+        <strong>Забронировать беседку:</strong> 
+        <a href="tel:+79025018056" style="color: var(--accent); font-weight: 600; font-size: 1.1rem;">+7 (902) 501-80-56</a>
       </p>
 
-      <h3>Основные услуги:</h3>
-      <ul style="list-style: none; display: grid; gap: 0.8rem;">
-        <li>✅ Аренда уютных беседок (мангал, туалет, протопка зимой включены)</li>
+      <!-- Основные услуги с перелинковкой -->
+      <h3 style="color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; margin: 2rem 0 1rem;">
+        🌲 Основные услуги
+      </h3>
+      <ul style="list-style: none; display: grid; gap: 0.8rem; margin-bottom: 2rem;">
+        <li>✅ Аренда уютных беседок 
+          <span style="font-size: 0.9rem; opacity: 0.8; display: block; margin-left: 1.5rem;">
+            (мангал, комфортный туалет, протопка зимой включены)
+          </span>
+        </li>
         <li>✅ Детский пляж + бассейн</li>
-        <li>✅ Бассейн с подогревом (Royal Beach)</li>
-        <li>✅ Веревочный парк и детские аттракционы</li>
-        <li>✅ Кафе «Шале» и банкетный зал</li>
-        <li>✅ Кейтеринг и доставка блюд для пикника</li>
-        <li>✅ Велопрокат и парковка</li>
-        <li>✅ Зимняя супер-горка и каток</li>
+        <li>✅ <a href="/park-pobeda/gallery/royal-beach/" style="color: var(--accent); font-weight: 500;">Бассейн с подогревом (Royal Beach)</a></li>
+        <li>✅ Веревочный парк</li>
+        <li>✅ Детские развлекательные аттракционы</li>
+        <li>✅ Детская комната для самых маленьких</li>
+        <li>✅ <a href="/park-pobeda/gallery/cafe-shale/" style="color: var(--accent); font-weight: 500;">Уютное кафе «Шале»</a></li>
+        <li>✅ <a href="/park-pobeda/gallery/banquet-hall/" style="color: var(--accent); font-weight: 500;">Банкетный зал «Шале»</a></li>
+        <li>✅ <a href="/park-pobeda/catering/" style="color: var(--accent); font-weight: 500;">Кейтеринговое обслуживание</a></li>
+        <li>✅ <a href="/park-pobeda/catering/" style="color: var(--accent); font-weight: 500;">Доставка блюд для пикника в беседки</a></li>
+        <li>✅ Велопрокат</li>
+        <li>✅ Парковка</li>
+        <li>✅ <a href="/park-pobeda/gallery/winter-park/" style="color: var(--accent); font-weight: 500;">Зимняя супер-горка</a></li>
+        <li>✅ <a href="/park-pobeda/gallery/winter-park/" style="color: var(--accent); font-weight: 500;">Зимний каток у новогодней ёлки</a></li>
       </ul>
 
-      <hr style="margin: 2rem 0; border: 0; border-top: 1px solid #eee;">
-
-      <h3>Аренда инвентаря:</h3>
-      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1rem 0;">
-        <div>♟ Шахматы/Шашки/Нарды: <strong>300₽/ч</strong> (мин. 2ч)</div>
-        <div>🏓 Настольный теннис: <strong>500₽/ч</strong> (мин. 2ч)</div>
-        <div>🍲 Микроволновка/Чайник: <strong>500₽</strong> (залог 3000₽)</div>
+      <!-- Аренда инвентаря -->
+      <h3 style="color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; margin: 2rem 0 1rem;">
+        ♟ Аренда инвентаря
+      </h3>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1rem 0;">
+        <div class="card" style="background: var(--bg); padding: 1rem;">
+          <strong>Настольные игры</strong><br>
+          <span style="font-size: 0.9rem; opacity: 0.9;">Шахматы / Шашки / Нарды</span><br>
+          <span style="color: var(--accent); font-weight: 600;">300₽/час</span>
+          <div style="font-size: 0.8rem; opacity: 0.7;">(минимум 2 часа)</div>
+        </div>
+        <div class="card" style="background: var(--bg); padding: 1rem;">
+          <strong>🏓 Настольный теннис</strong><br>
+          <span style="color: var(--accent); font-weight: 600;">500₽/час</span>
+          <div style="font-size: 0.8rem; opacity: 0.7;">(минимум 2 часа)</div>
+        </div>
+        <div class="card" style="background: var(--bg); padding: 1rem;">
+          <strong>🍲 Микроволновка / Чайник</strong><br>
+          <span style="color: var(--accent); font-weight: 600;">500₽</span>
+          <div style="font-size: 0.8rem; opacity: 0.7;">(залог за сохранность 3000₽)</div>
+        </div>
       </div>
 
-      <h3>Дополнительно:</h3>
-      <p>Шампуры (6 шт.) — 400₽ | Решетка — 650₽ | Розжиг — 150₽ | Уголь (3кг) — 400₽</p>
-      
-      <p style="margin-top: 2rem; text-align: center; font-weight: 500; color: var(--primary);">
-        Живописная природа делает отдых здесь фантастическим!
+      <!-- Дополнительно для шашлыка -->
+      <h3 style="color: var(--primary); border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; margin: 2rem 0 1rem;">
+        🔥 Дополнительно для пикника
+      </h3>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0.8rem; margin: 1rem 0;">
+        <div>🍢 Шампуры (6 шт.) — <strong>400₽</strong></div>
+        <div>🔲 Решетка — <strong>650₽</strong></div>
+        <div>🔥 Розжиг — <strong>150₽</strong></div>
+        <div>🪵 Уголь (3 кг) — <strong>400₽</strong></div>
+      </div>
+
+      <!-- Финальный акцент -->
+      <p style="margin-top: 3rem; text-align: center; font-weight: 500; color: var(--primary); font-size: 1.1rem; line-height: 1.5;">
+        🌿 Живописная природа, окружающая наш парк, дополняет ощущения, делая отдых здесь фантастическим!
       </p>
     </div>
   </div>

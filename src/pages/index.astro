@@ -5,16 +5,20 @@ import Accordion from '../components/Accordion.astro';
 ---
 
 <BaseLayout title="Аренда беседки в лесопарке">
-  <!-- Герой-секция (исправленный путь к картинке) -->
-  <section class="hero-section" style="background-image: url('/park-pobeda/images/hero-bg.jpg');">
+  <!-- Герой-секция с картинкой (не фон!) -->
+  <div class="hero-wrapper">
+    <img 
+      src="/park-pobeda/images/hero-bg.jpg" 
+      alt="Парк Победы" 
+      class="hero-image"
+      onerror="this.style.display='none'; this.nextElementSibling?.style.setProperty('background', '#2B4C3A')"
+    >
     <div class="hero-overlay"></div>
-    <div class="hero-content container">
+    <div class="hero-content">
       <h1 class="hero-title">Аренда беседки в лесопарке</h1>
-      <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">
-        Уютный отдых на природе в черте города
-      </p>
+      <p class="hero-subtitle">Уютный отдых на природе в черте города</p>
     </div>
-  </section>
+  </div>
 
   <div class="container">
     <BookingWidget />
@@ -44,9 +48,18 @@ import Accordion from '../components/Accordion.astro';
       </details>
     </Accordion>
 
-    <!-- Остальной контент главной страницы -->
+    <!-- Карточки услуг -->
     <section class="grid">
-      <!-- ... карточки ... -->
+      <div class="card">
+        <h3>🔥 Акции</h3>
+        <p>Скидки именинникам и специальные предложения.</p>
+        <a href="/park-pobeda/promotions/" style="color: var(--accent); font-weight: 600;">Подробнее →</a>
+      </div>
+      <div class="card">
+        <h3>🍔 Кафе «Шале»</h3>
+        <p>Шашлык на углях и прохладительные напитки.</p>
+        <a href="/park-pobeda/menu/" style="color: var(--accent); font-weight: 600;">Смотреть меню →</a>
+      </div>
     </section>
   </div>
 </BaseLayout>
